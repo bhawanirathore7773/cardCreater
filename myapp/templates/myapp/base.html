@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="_a7XAGJK5hOp6ZM06gAHYr-ltFk9d8e67Crmh29OsFc" />
+    <title>College ID Card</title>
+    <link rel="stylesheet" href="{% static 'style_file/style.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'style_file/mediaqueries.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/id-card.png' %}">
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Tech Solve Space</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="{% url 'myapp:home_page' %}#about">About</a></li>
+          <li><a href="{% url 'myapp:home_page' %}#idcards">Id Card</a></li>
+          <li><a href="{% url 'myapp:home_page' %}#contact">Contact Us</a></li>
+          <li><a href="#" class="login">Login </a></li>
+          <li><a href="#" class="signup">Sign Up </a></li>
+          
+        </ul>
+      </div>
+    </nav>
+    <nav id="mobile-nav">
+      <div class="logo"><img src="{% static 'images/logo.png' %}"></div>
+      <div class="mobile-menu">
+        <div class="mobile-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="{% url 'myapp:home_page' %}#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="{% url 'myapp:home_page' %}#idcards" onclick="toggleMenu()">ID Cards</a></li>
+          <li><a href="{% url 'myapp:home_page' %}#" onclick="toggleMenu()">Login/Signup</a></li>
+          <li><a href="{% url 'myapp:home_page' %}#contact" onclick="toggleMenu()">Contact Us</a></li>
+        </div>
+      </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    
+    <div class ="footer">
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="{% url 'myapp:home_page' %}#about">About</a></li>
+            <li><a href="{% url 'myapp:home_page' %}#idcards">Id Card</a></li>
+            <li><a href="{% url 'myapp:home_page' %}#contact">Contact Us</a></li>
+            <li><a href="{% url 'myapp:home_page' %}#">Log In </a></li>
+            <li><a href="{% url 'myapp:home_page' %}#">Sign Up</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Bhawani Singh. All Rights Reserved.</p>
+    </footer>
+  </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".menu-links");
+        const icon = document.querySelector(".mobile-icon");
+        menu.classList.toggle("open");
+        icon.classList.toggle("open");
+      }      
+    </script>
+  </body>
+</html>

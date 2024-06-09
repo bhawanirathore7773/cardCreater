@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="_a7XAGJK5hOp6ZM06gAHYr-ltFk9d8e67Crmh29OsFc" />
+    <title>College ID Card</title>
+    <link rel="stylesheet" href="{% static 'style_file/style.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'style_file/mediaqueries.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/id-card.png' %}">
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Tech Solve Space</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#idcards">Id Card</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#" class="login">Login </a></li>
+          <li><a href="#" class="signup">Sign Up </a></li>
+          
+        </ul>
+      </div>
+    </nav>
+    <nav id="mobile-nav">
+      <div class="logo"><img src="{% static 'images/logo.png' %}"></div>
+      <div class="mobile-menu">
+        <div class="mobile-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#idcards" onclick="toggleMenu()">Id Card</a></li>
+          <li><a href="#" onclick="toggleMenu()">Login/Signup</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact Us</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="home">
+      <div class="section__pic-container">
+        <img src="{% static 'images/card1.png' %}" alt="Id card picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello,</p>
+        <h1 class="title" style ="color:#22a2e2;">CREATE</h1>
+        <p class="section__text__p2">Free College Id Card</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="location.href='#idcards' ">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h1 class="title">About Project</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="{% static 'images/about-card.png' %}"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="{% static 'images/technology.png' %}"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Technology Used</h3>
+              <p>HTML, CSS, JavaScript</p>
+              <p>PYTHON, DJANGO</p>
+              <p>Bootstrap</p>
+              <p>Database</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="{% static 'images/benefit.png' %}"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Benefits</h3>
+              <p>Free To Download</p>
+              <p>Convenience</p>
+              <p>Emergency Situations</p>
+              <p>Reduced Administrative Burden</p>
+              <p>Environmentally Friendly</p>
+
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              <b>The College ID Card Generator</b> is a web-based platform that simplifies the process
+               of generating and downloading college identification cards for students. Using a 
+               combination of HTML, CSS, JavaScript, Python, and Django, the website offers a 
+               smooth user experience. Students can input their details and upload a photo, which 
+               is securely stored in a SQLite3 database. The system dynamically generates a digital
+                ID card incorporating the provided information. The website is mobile-responsive 
+                and allows for customization of ID card design. In case of a lost physical ID card,
+                 students can quickly download a digital copy from the website. Overall, the project
+                  reduces administrative workload, enhances student convenience, and promotes sustainability.  
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="idcards">
+      <p class="section__text__p1">Generate Id Card</p>
+      <h1 class="title">ID Card</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="{% static 'images/balaji-card-sample.png' %}"
+                alt="Id Card 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Sri Balaji College Identity Card</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='createCard/balajiCard' "
+              >
+                CREATE
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                
+              >
+                VIEW 
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="{% static 'images/pak-card-sample.png' %}"
+                alt="ID Card 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Pakistan Identity Card</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+              >
+                CREATE
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+              >
+                VIEW 
+              </button>
+              
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="{% static 'images/samyak-card-sample.png' %}"
+                alt="ID Card 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Samyak Coaching Centre Identity Card</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                
+              >
+                CREATE
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                
+              >
+                VIEW 
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="{% static 'images/railway-card-sample.jpg' %}"
+                alt="ID Card 4"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Indian Railway Identity Card</h2>
+            <div class="btn-container">
+              <button 
+                class="btn btn-color-2 project-btn"
+                
+              >
+                CREATE
+              </button>
+              <button 
+                class="btn btn-color-2 project-btn"
+                
+              >
+                VIEW 
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Us</h1>
+      <div class="content">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-two">Jaipur, Rajasthan</div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">+91 9024132535</div>
+  
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">bhawanirathore772304@gmail.com</div>
+            <div class="text-two">bsrathore6350@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="topic-text">Send us a message</div>
+          <p>If you have any work from me or any types of quries related to my tutorial, you can send me message from here. It's my pleasure to help you.</p>
+          <form action="#">
+            <div class="input-box">
+              <input type="text" placeholder="Enter your name"  id="name" autocomplete=off
+              class="item" />
+              <div class="error-txt">Name can't be blank</div>
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Enter your email" id="email" 
+              class="item" autocomplete=off />
+              <div class="error-txt">Email can't be blank</div>
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Subject" id="subject"
+              class="item" autocomplete=off />
+              <div class="error-txt">Subject can't be blank</div>
+            </div>
+            <div class="input-box message-box">
+              <textarea placeholder="Enter your message" id="message"
+              class="item"></textarea>
+              <div class="error-txt">Message can't be blank</div>
+            </div>
+            <div class="button">
+              <button type="submit">Send Now</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class ="footer">
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#idcards">Id Card</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">Log In </a></li>
+            <li><a href="#">Sign Up</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Bhawani Singh. All Rights Reserved.</p>
+    </footer>
+  </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{% static 'style_file/script.js' %}"></script>
+  </body>
+</html>

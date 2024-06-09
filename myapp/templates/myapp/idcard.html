@@ -1,0 +1,71 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+{% if cardName == "balajiCard" %}
+
+<section id="details-form">
+    <p class="section__text__p1">ID Card </p>
+    <h1 class="title">Sri Balaji College </h1>
+    <div class="content">
+      <div class="right-side">
+        <div class="topic-text">Fill The Form</div>
+
+        <form action="{% url 'myapp:createCard' cardName='balajiCard' %}" method="POST"  enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="input-box">
+            <input type="text" name = "name" placeholder="Enter your name" id="name" autocomplete="off"
+            class="item" />
+            <div class="error-txt">Name can't be blank</div>
+          </div>
+          <div class="input-box">
+            <input type="text" name = "fatherName" placeholder="Enter your Father's name" id="fatherName" autocomplete="off"
+            class="item" />
+            <div class="error-txt">Father's name can't be blank</div>
+          </div>
+          <div class="input-box">
+            <select id="course" name = "course" class="item">
+                <option value="" disabled selected>Select your course</option>
+                <option value="BCA">BCA</option>
+                <option value="BSc">B.Sc</option>
+                <option value="BCom">B.Com</option>
+                <option value="BA">B.A.</option>
+                <!-- Add more options as needed -->
+            </select>
+            <div class="error-txt">DOB can't be blank</div>
+          </div>
+
+          <div class="input-box">
+            <input type="text" name = "dob" placeholder="Enter your date of birth" id="dob"
+            class="item" autocomplete="off" />
+            <div class="error-txt">DOB can't be blank</div>
+          </div>
+          <div class="input-box">
+            <input type="text" name = "address" placeholder="Enter your Address" id="address"
+            class="item" autocomplete="off" />
+            <div class="error-txt">Address can't be blank</div>
+          </div>
+          <div class="input-box">
+            <input type="text" name = "state" placeholder="Enter your State" id="state"
+            class="item" autocomplete="off" />
+            <div class="error-txt">state can't be blank</div>
+          </div>
+          <div class="input-box">
+            <input type="file" name = "image" id="image" class="item" accept="image/*" />
+          </div>
+          <div class="input-box">
+            <input type="tel" name = "mobile" placeholder="Enter your Mobile Number" id="mobile" class="item" pattern="[0-9]{10}" required autocomplete="off" />
+            <div class="error-txt">Please enter a valid mobile number</div>
+          </div>
+          <div class="button">
+            <button type="submit">Generate Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+{% elif cardName == "pakistanCard" %}
+<h2>Create Pakistan Identity Card </h2>
+{% elif cardName == "samyakCard" %}
+<h2>Create Samyak Coaching Centre Identity Card </h2>
+{% endif %}
+
+{% endblock %}
